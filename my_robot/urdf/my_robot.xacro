@@ -43,6 +43,16 @@
         <child link="chassis"/>
     </joint>
 
+    <link name="base_footprint"></link>
+
+    <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="robot_footprint"/>
+        <child link="base_footprint"/>
+    </joint>
+
+    <!-- definition of the chassis -->
+
     <link name='chassis'>
         <pose>0 0 0.1 0 0 0</pose>
 
