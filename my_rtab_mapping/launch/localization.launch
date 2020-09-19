@@ -12,7 +12,7 @@
 
   <!-- Mapping Node -->
   <group ns="rtabmap">
-    <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="--delete_db_on_start">
+    <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" >
 
       <!-- Basic RTAB-Map Parameters -->
       <param name="database_path"       type="string" value="$(arg database_path)"/>
@@ -58,13 +58,16 @@
       <param name="Vis/MinInliers" type="string" value="15"/>
 
       <!-- Set to false to avoid saving data when robot is not moving -->
-      <param name="Mem/NotLinkedNodesKept" type="string" value="false"/>
+      <!--<param name="Mem/NotLinkedNodesKept" type="string" value="false"/>-->
+
+      <!-- parameter needed for localization-->
+      <param name="Mem/IncrementalMemory" type="string" value="false"/>
     </node>
   </group>
 
 
 <!-- visualization with rtabmapviz -->
-   <node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
+   <!--<node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
         <param name="subscribe_depth"             type="bool" value="true"/>
         <param name="subscribe_scan"              type="bool" value="true"/>
         <param name="frame_id"                    type="string" value="base_footprint"/>
@@ -73,6 +76,6 @@
         <remap from="depth/image"     to="$(arg depth_topic)"/>
         <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
         <remap from="scan"            to="$(arg scan_topic)"/>
-    </node>
+    </node>-->
 
 </launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <node pkg="my_robot" type="my_robot_teleop.py" name="my_robot_teleop" output="screen">
+    </node>
+
+</launch>
