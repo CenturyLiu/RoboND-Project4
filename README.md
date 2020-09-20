@@ -72,7 +72,7 @@ The scan involved set produces lots of local loop closure, but lacks no global l
 
 The tuned set increased the update rate and the number of features the rtabmap package will detect on each image. This helps increasing the  number of global loop closure detection, and should be generally good for mapping.
 
-![tuned_2D](https://github.com/CenturyLiu/RoboND-Project4/blob/master/tuned_2d.png)
+![tuned_2D](https://github.com/CenturyLiu/RoboND-Project4/blob/master/tuned_2d_1.png)
 > 2D map created by using the tuned set of parameters. 29 global loop closures and 116 local loop closures are detected. Missing features and map overlapping are obvious in this map.
 
 ![tuned_3D](https://github.com/CenturyLiu/RoboND-Project4/blob/master/3D_map_with_tuned_param.gif)
