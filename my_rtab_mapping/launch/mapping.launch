@@ -32,7 +32,7 @@
       <remap from="grid_map" to="/map"/>
 
       <!-- Rate (Hz) at which new nodes are added to map -->
-      <param name="Rtabmap/DetectionRate" type="string" value="1"/>
+      <param name="Rtabmap/DetectionRate" type="string" value="5"/>
 
       <!-- 2D SLAM -->
       <param name="Reg/Force3DoF" type="string" value="true"/>
@@ -45,13 +45,14 @@
       <param name="Kp/DetectorStrategy" type="string" value="0"/>
 
       <!-- Maximum visual words per image (bag-of-words) -->
-      <param name="Kp/MaxFeatures" type="string" value="400"/>
+      <param name="Kp/MaxFeatures" type="string" value="500"/>
 
       <!-- Used to extract more or less SURF features -->
       <param name="SURF/HessianThreshold" type="string" value="100"/>
 
       <!-- Loop Closure Constraint -->
       <!-- 0=Visual, 1=ICP (1 requires scan)-->
+      <!--<param name="Reg/Strategy" type="string" value="0"/>-->
       <param name="Reg/Strategy" type="string" value="0"/>
 
       <!-- Minimum visual inliers to accept loop closure -->
